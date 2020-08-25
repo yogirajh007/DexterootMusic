@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Compile and Execute your program...</title>
+	<!-- Font Awesome -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/png" href="logo.png"/>
+</head>
+<body>
+  <!--Navbar -->
+  
+
+<!--/.Navbar -->
+	<div class="container" style="padding-top: 10px;">
+<div class="row">
+	<div class="col-md-6 col-lg-6">
+
+		<div class="form-group" >
+      <form action="" method="post" id="testform">
+	      <h2>Search and add to list:</h2>
+
+<br>
+                    <input type="text" placeholder="Search" id="search" name="search">
+                    <button type="button" id="butt">Search </button>
+                </form>
+	    <br>
+  Results:
+  <div id="rest"></div>
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$("#butt").click(function(){        
+    $.post("getresults.php", $("#testform").serialize(), function(data) {
+	$("#rest").html("");
+        $('#rest').append(data);
+    });
+});
+</script>
+<script>
+$("#search").keypress(function(e){
+	var key = e.which;
+	if(key == 13)
+	{
+		$.post("getresults.php", $("#testform").serialize(), function(data) {
+	$("#rest").html("");
+        $('#rest').append(data);
+    });
+	}
+});
+</script>
+
+	    
+</div>
+</div>
+<div class="col-md-6 col-lg-6" id="result">
+	<h2>Result:</h2>
+	<div id= "res"></div>
+</div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$("#post-btn").click(function(){        
+    $.post("gpptest1.php", $("#testform").serialize(), function(data) {
+	$("#res").html("");
+        $('#res').append(data);
+    });
+});
+</script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/js/mdb.min.js"></script>
+</body>
+</html>

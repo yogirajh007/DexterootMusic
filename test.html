@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<style>
+	div{
+  display:block; 
+  cursor: pointer; 
+  width: 50px; 
+  height:50px; 
+  background-color:#000000;
+}
+
+button{
+  cursor: pointer; 
+  font-family:Tahoma; 
+  font-weight: bold;
+  font-size:14px; 
+  background-color:#00ffff;
+  color:blue;
+  padding: 13px 6px;
+}
+
+</style>
+<body>
+<div>
+  <button id="button">Play</button>
+</div>
+
+<audio id="player">
+  <source src='https://snoidcdnems02.cdnsrv.jio.com/h.saavncdn.com/609/b9b2c6dad98bdf89b1368acf6ab4647d_320.mp3' type='audio/mpeg' />
+</audio>
+
+<script type="text/javascript">
+	
+var button = document.getElementById("button");
+var audio = document.getElementById("player");
+
+button.addEventListener("click", function(){
+  if(audio.paused){
+    audio.play();
+    button.innerHTML = "Pause";
+  } else {
+    audio.pause();
+    button.innerHTML = "Play";
+  }
+});
+
+
+</script>
+</body>
+</html>
