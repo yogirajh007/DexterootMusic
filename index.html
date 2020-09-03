@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DexterootMusic Testing</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<!-- Include Amplitude JS -->
+		<script type="text/javascript" src="dist/amplitude.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Include Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+		<style>
+		.loader{width:60px;height:60px;background:0 0;border:10px solid transparent;border-top-color:#f56;border-left-color:#f56;border-radius:50%;animation:loader .75s 10 ease forwards}@keyframes loader{100%{transform:rotate(360deg)}}
+	</style>
+	</head>
+	<body>
+		<div style="text-align: center;">
+
+			Search
+			<br>
+			<input type="search" id="search" name="search"></input>
+				
+		</div>
+		<!-- Blue Playlist Container -->
+		<div id="blue-playlist-container" style="display: none">
+
+			<!-- Amplitude Player -->
+			<div id="amplitude-player">
+
+				<!-- Left Side Player -->
+				<div id="amplitude-left">
+					<img data-amplitude-song-info="cover_art_url"/>
+					<div id="player-left-bottom">
+						<div id="time-container">
+							<span class="current-time">
+								<span class="amplitude-current-minutes" ></span>:<span class="amplitude-current-seconds"></span>
+							</span>
+							<div id="progress-container">
+								<input type="range" class="amplitude-song-slider"/>
+								<progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
+								<progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+							</div>
+							<span class="duration">
+								<span class="amplitude-duration-minutes"></span>:<span class="amplitude-duration-seconds"></span>
+							</span>
+						</div>
+
+						<div id="control-container">
+							<div id="repeat-container">
+								<div class="amplitude-repeat" id="repeat"></div>
+								<div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+							</div>
+
+							<div id="central-control-container">
+								<div id="central-controls">
+									<div class="amplitude-prev" id="previous"></div>
+									<div class="amplitude-play-pause" id="play-pause"></div>
+									<div class="amplitude-next" id="next"></div>
+								</div>
+							</div>
+
+							<div id="volume-container">
+								<div class="volume-controls">
+									<div class="amplitude-mute amplitude-not-muted"></div>
+									<input type="range" class="amplitude-volume-slider"/>
+									<div class="ms-range-fix"></div>
+								</div>
+								<div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle-right"></div>
+							</div>
+						</div>
+
+						<div id="meta-container">
+							<span data-amplitude-song-info="name" class="song-name"></span>
+
+							<div class="song-artist-album">
+								<span data-amplitude-song-info="artist"></span>
+								<span data-amplitude-song-info="album"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Left Side Player -->
+
+				<!-- Right Side Player -->
+				<div id="amplitude-right">
+					<div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
+						<div class="song-now-playing-icon-container">
+							<div class="play-button-container">
+
+							</div>
+							<img class="now-playing" src="./img/now-playing.svg"/>
+						</div>
+						<div class="song-meta-data">
+							<span class="song-title">Risin' High (feat Raashan Ahmad)</span>
+							<span class="song-artist">Ancient Astronauts</span>
+						</div>
+					</div>
+					<div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="1">
+						<div class="song-now-playing-icon-container">
+							<div class="play-button-container">
+
+							</div>
+							<img class="now-playing" src="./img/now-playing.svg"/>
+						</div>
+						<div class="song-meta-data">
+							<span class="song-title">The Gun</span>
+							<span class="song-artist">Lorn</span>
+						</div>
+					</div>
+					<div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="2">
+						<div class="song-now-playing-icon-container">
+							<div class="play-button-container">
+
+							</div>
+							<img class="now-playing" src="./img/now-playing.svg"/>
+						</div>
+						<div class="song-meta-data">
+							<span class="song-title">Anvil</span>
+							<span class="song-artist">Lorn</span>
+						</div>
+					</div>
+					<div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="3">
+						<div class="song-now-playing-icon-container">
+							<div class="play-button-container">
+
+							</div>
+							<img class="now-playing" src="./img/now-playing.svg"/>
+						</div>
+						<div class="song-meta-data">
+							<span class="song-title">I Came Running</span>
+							<span class="song-artist">Ancient Astronauts</span>
+						</div>
+					</div>
+					<div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="4">
+						<div class="song-now-playing-icon-container">
+							<div class="play-button-container">
+
+							</div>
+							<img class="now-playing" src="./img/now-playing.svg"/>
+						</div>
+						<div class="song-meta-data">
+							<span class="song-title">First Snow</span>
+							<span class="song-artist">Emancipator</span>
+						</div>
+					</div>
+
+				</div>
+				<!-- End Right Side Player -->
+			</div>
+			<!-- End Amplitdue Player -->
+		</div>
+		
+		<!--
+			Include UX functions JS
+
+			NOTE: These are for handling things outside of the scope of AmplitudeJS
+		-->
+		<script type="text/javascript" src="js/functions.js"></script>
+	</body>
+</html>
