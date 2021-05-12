@@ -108,9 +108,7 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsNotificationCon
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask The FieldMask to use when updating the
-   * notification config.
-   *
-   * If empty all mutable fields will be updated.
+   * notification config. If empty all mutable fields will be updated.
    * @return Google_Service_SecurityCommandCenter_NotificationConfig
    */
   public function patch($name, Google_Service_SecurityCommandCenter_NotificationConfig $postBody, $optParams = array())

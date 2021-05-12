@@ -62,9 +62,9 @@ class Google_Service_AndroidPublisher extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://androidpublisher.googleapis.com/';
     $this->servicePath = '';
-    $this->batchPath = 'batch/androidpublisher/v3';
+    $this->batchPath = 'batch';
     $this->version = 'v3';
     $this->serviceName = 'androidpublisher';
 
@@ -1209,6 +1209,14 @@ class Google_Service_AndroidPublisher extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'startIndex' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'token' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -1220,14 +1228,6 @@ class Google_Service_AndroidPublisher extends Google_Service
                 'type' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'startIndex' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'token' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
@@ -1268,7 +1268,11 @@ class Google_Service_AndroidPublisher extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'translationLanguage' => array(
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'token' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1276,11 +1280,7 @@ class Google_Service_AndroidPublisher extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'token' => array(
+                'translationLanguage' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

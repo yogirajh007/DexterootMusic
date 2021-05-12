@@ -66,22 +66,17 @@ class Google_Service_RealTimeBidding_Resource_BuyersCreatives extends Google_Ser
    * Lists creatives. (creatives.listBuyersCreatives)
    *
    * @param string $parent Required. Name of the parent buyer that owns the
-   * creatives.
-   *
-   * The pattern for this resource is either `buyers/{buyerAccountId}` or
-   * `bidders/{bidderAccountId}`.
-   *
-   * For `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the
-   * following: 1. The ID of the buyer that is accessing their own creatives. 2.
-   * The ID of the child seat buyer under a bidder account.    So for listing
-   * creatives pertaining to the child seat buyer (`456`)    under bidder account
-   * (`123`), you would use the pattern: `buyers/456`. 3. The ID of the bidder
-   * itself.    So for listing creatives pertaining to bidder (`123`),    you
-   * would use `buyers/123`.
-   *
-   * If you want to access all creatives pertaining to both the bidder and all of
-   * its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for
-   * all creatives pertaining to bidder (`123`), use `bidders/123`.
+   * creatives. The pattern for this resource is either `buyers/{buyerAccountId}`
+   * or `bidders/{bidderAccountId}`. For `buyers/{buyerAccountId}`, the
+   * `buyerAccountId` can be one of the following: 1. The ID of the buyer that is
+   * accessing their own creatives. 2. The ID of the child seat buyer under a
+   * bidder account. So for listing creatives pertaining to the child seat buyer
+   * (`456`) under bidder account (`123`), you would use the pattern:
+   * `buyers/456`. 3. The ID of the bidder itself. So for listing creatives
+   * pertaining to bidder (`123`), you would use `buyers/123`. If you want to
+   * access all creatives pertaining to both the bidder and all of its child seat
+   * accounts, you would use `bidders/{bidderAccountId}`, e.g., for all creatives
+   * pertaining to bidder (`123`), use `bidders/123`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Requested page size. The server may return fewer
@@ -97,10 +92,8 @@ class Google_Service_RealTimeBidding_Resource_BuyersCreatives extends Google_Ser
    * ListCreativesResponse.nextPageToken returned from the previous call to the
    * 'ListCreatives' method.
    * @opt_param string filter Query string to filter creatives. If no filter is
-   * specified, all active creatives will be returned.
-   *
-   * Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND
-   * disapprovalReason:UNACCEPTABLE_CONTENT) OR
+   * specified, all active creatives will be returned. Example: 'accountId=12345
+   * AND (dealsStatus:DISAPPROVED AND disapprovalReason:UNACCEPTABLE_CONTENT) OR
    * declaredAttributes:IS_COOKIE_TARGETED'
    * @return Google_Service_RealTimeBidding_ListCreativesResponse
    */
@@ -113,7 +106,10 @@ class Google_Service_RealTimeBidding_Resource_BuyersCreatives extends Google_Ser
   /**
    * Updates a creative. (creatives.patch)
    *
-   * @param string $name Name of the creative to update. See creative.name.
+   * @param string $name Output only. Name of the creative. Follows the pattern
+   * `buyers/{buyer}/creatives/{creative}`, where `{buyer}` represents the account
+   * ID of the buyer who owns the creative, and `{creative}` is the buyer-specific
+   * creative ID that references this creative in the bid response.
    * @param Google_Service_RealTimeBidding_Creative $postBody
    * @param array $optParams Optional parameters.
    *

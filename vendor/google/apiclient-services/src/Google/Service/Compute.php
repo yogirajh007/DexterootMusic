@@ -93,6 +93,7 @@ class Google_Service_Compute extends Google_Service
   public $regionHealthChecks;
   public $regionInstanceGroupManagers;
   public $regionInstanceGroups;
+  public $regionNetworkEndpointGroups;
   public $regionNotificationEndpoints;
   public $regionOperations;
   public $regionSslCertificates;
@@ -173,6 +174,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'get' => array(
               'path' => '{project}/zones/{zone}/acceleratorTypes/{acceleratorType}',
@@ -224,6 +229,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -263,6 +272,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -357,6 +370,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -398,6 +415,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'delete' => array(
               'path' => '{project}/zones/{zone}/autoscalers/{autoscaler}',
@@ -491,6 +512,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -665,6 +690,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/global/backendBuckets/{backendBucket}',
@@ -761,6 +790,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -875,6 +908,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/global/backendServices/{backendService}',
@@ -972,6 +1009,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'get' => array(
               'path' => '{project}/zones/{zone}/diskTypes/{diskType}',
@@ -1022,6 +1063,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -1086,6 +1131,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'createSnapshot' => array(
@@ -1179,6 +1228,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'insert' => array(
               'path' => '{project}/zones/{zone}/disks',
@@ -1232,6 +1285,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'removeResourcePolicies' => array(
@@ -1429,6 +1486,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'setLabels' => array(
               'path' => '{project}/global/externalVpnGateways/{resource}/setLabels',
@@ -1543,6 +1604,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/global/firewalls/{firewall}',
@@ -1620,6 +1685,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -1714,6 +1783,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -1847,6 +1920,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -1930,6 +2007,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -2091,6 +2172,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listNetworkEndpoints' => array(
               'path' => '{project}/global/networkEndpointGroups/{networkEndpointGroup}/listNetworkEndpoints',
@@ -2121,6 +2206,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -2161,6 +2250,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -2218,6 +2311,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'wait' => array(
               'path' => '{project}/global/operations/{operation}/wait',
@@ -2272,6 +2369,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -2346,6 +2447,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -2469,6 +2574,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/global/httpHealthChecks/{httpHealthCheck}',
@@ -2590,6 +2699,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -2722,6 +2835,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'insert' => array(
               'path' => '{project}/global/images',
@@ -2763,6 +2880,29 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                 ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => '{project}/global/images/{image}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'image' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2875,6 +3015,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'applyUpdatesToInstances' => array(
               'path' => '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/applyUpdatesToInstances',
@@ -2968,6 +3112,26 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'deletePerInstanceConfigs' => array(
+              'path' => '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/deletePerInstanceConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instanceGroupManager' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'get' => array(
               'path' => '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}',
               'httpMethod' => 'GET',
@@ -3037,6 +3201,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listErrors' => array(
               'path' => '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/listErrors',
@@ -3072,6 +3240,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'listManagedInstances' => array(
@@ -3109,10 +3281,78 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+              ),
+            ),'listPerInstanceConfigs' => array(
+              'path' => '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/listPerInstanceConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instanceGroupManager' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}',
               'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instanceGroupManager' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patchPerInstanceConfigs' => array(
+              'path' => '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/patchPerInstanceConfigs',
+              'httpMethod' => 'POST',
               'parameters' => array(
                 'project' => array(
                   'location' => 'path',
@@ -3235,6 +3475,30 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'updatePerInstanceConfigs' => array(
+              'path' => '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/updatePerInstanceConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instanceGroupManager' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),
           )
         )
@@ -3297,6 +3561,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -3392,6 +3660,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listInstances' => array(
               'path' => '{project}/zones/{zone}/instanceGroups/{instanceGroup}/listInstances',
@@ -3427,6 +3699,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'removeInstances' => array(
@@ -3535,6 +3811,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'insert' => array(
               'path' => '{project}/global/instanceTemplates',
@@ -3574,6 +3854,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'setIamPolicy' => array(
@@ -3697,6 +3981,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'attachDisk' => array(
@@ -3881,6 +4169,30 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),'getScreenshot' => array(
+              'path' => '{project}/zones/{zone}/instances/{instance}/screenshot',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instance' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
               ),
             ),'getSerialPortOutput' => array(
               'path' => '{project}/zones/{zone}/instances/{instance}/serialPort',
@@ -3983,6 +4295,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listReferrers' => array(
               'path' => '{project}/zones/{zone}/instances/{instance}/referrers',
@@ -4018,6 +4334,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'removeResourcePolicies' => array(
@@ -4655,6 +4975,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'delete' => array(
               'path' => '{project}/regions/{region}/interconnectAttachments/{interconnectAttachment}',
@@ -4753,6 +5077,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/regions/{region}/interconnectAttachments/{interconnectAttachment}',
@@ -4827,6 +5155,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -4926,6 +5258,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -5045,6 +5381,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'insert' => array(
               'path' => '{project}/global/licenses',
@@ -5084,6 +5424,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'setIamPolicy' => array(
@@ -5155,6 +5499,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'get' => array(
               'path' => '{project}/zones/{zone}/machineTypes/{machineType}',
@@ -5206,6 +5554,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -5245,6 +5597,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'attachNetworkEndpoints' => array(
@@ -5388,6 +5744,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listNetworkEndpoints' => array(
               'path' => '{project}/zones/{zone}/networkEndpointGroups/{networkEndpointGroup}/listNetworkEndpoints',
@@ -5423,6 +5783,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'testIamPermissions' => array(
@@ -5547,6 +5911,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listPeeringRoutes' => array(
               'path' => '{project}/global/networks/{network}/listPeeringRoutes',
@@ -5589,6 +5957,10 @@ class Google_Service_Compute extends Google_Service
                 'region' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -5730,6 +6102,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'delete' => array(
               'path' => '{project}/zones/{zone}/nodeGroups/{nodeGroup}',
@@ -5818,6 +6194,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'insert' => array(
               'path' => '{project}/zones/{zone}/nodeGroups',
@@ -5873,6 +6253,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listNodes' => array(
               'path' => '{project}/zones/{zone}/nodeGroups/{nodeGroup}/listNodes',
@@ -5908,6 +6292,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -6037,6 +6425,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'delete' => array(
               'path' => '{project}/regions/{region}/nodeTemplates/{nodeTemplate}',
@@ -6101,6 +6493,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'insert' => array(
               'path' => '{project}/regions/{region}/nodeTemplates',
@@ -6150,6 +6546,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'setIamPolicy' => array(
@@ -6231,6 +6631,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'get' => array(
               'path' => '{project}/zones/{zone}/nodeTypes/{nodeType}',
@@ -6282,6 +6686,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -6321,6 +6729,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -6415,6 +6827,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -6572,6 +6988,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listXpnHosts' => array(
               'path' => '{project}/listXpnHosts',
@@ -6597,6 +7017,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'moveDisk' => array(
@@ -6772,6 +7196,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/regions/{region}/autoscalers',
@@ -6942,6 +7370,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/regions/{region}/backendServices/{backendService}',
@@ -7030,6 +7462,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'get' => array(
               'path' => '{project}/regions/{region}/commitments/{commitment}',
@@ -7100,6 +7536,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -7160,6 +7600,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -7283,6 +7727,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'insert' => array(
               'path' => '{project}/regions/{region}/disks',
@@ -7336,6 +7784,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'removeResourcePolicies' => array(
@@ -7553,6 +8005,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/regions/{region}/healthCheckServices/{healthCheckService}',
@@ -7680,6 +8136,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -7856,6 +8316,26 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'deletePerInstanceConfigs' => array(
+              'path' => '{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/deletePerInstanceConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instanceGroupManager' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'get' => array(
               'path' => '{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}',
               'httpMethod' => 'GET',
@@ -7925,6 +8405,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listErrors' => array(
               'path' => '{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/listErrors',
@@ -7960,6 +8444,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'listManagedInstances' => array(
@@ -7997,10 +8485,78 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+              ),
+            ),'listPerInstanceConfigs' => array(
+              'path' => '{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/listPerInstanceConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instanceGroupManager' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}',
               'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instanceGroupManager' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patchPerInstanceConfigs' => array(
+              'path' => '{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/patchPerInstanceConfigs',
+              'httpMethod' => 'POST',
               'parameters' => array(
                 'project' => array(
                   'location' => 'path',
@@ -8123,6 +8679,30 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'updatePerInstanceConfigs' => array(
+              'path' => '{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/updatePerInstanceConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instanceGroupManager' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),
           )
         )
@@ -8183,6 +8763,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listInstances' => array(
               'path' => '{project}/regions/{region}/instanceGroups/{instanceGroup}/listInstances',
@@ -8219,6 +8803,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'setNamedPorts' => array(
               'path' => '{project}/regions/{region}/instanceGroups/{instanceGroup}/setNamedPorts',
@@ -8242,6 +8830,114 @@ class Google_Service_Compute extends Google_Service
                 'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->regionNetworkEndpointGroups = new Google_Service_Compute_Resource_RegionNetworkEndpointGroups(
+        $this,
+        $this->serviceName,
+        'regionNetworkEndpointGroups',
+        array(
+          'methods' => array(
+            'delete' => array(
+              'path' => '{project}/regions/{region}/networkEndpointGroups/{networkEndpointGroup}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'networkEndpointGroup' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'get' => array(
+              'path' => '{project}/regions/{region}/networkEndpointGroups/{networkEndpointGroup}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'networkEndpointGroup' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'insert' => array(
+              'path' => '{project}/regions/{region}/networkEndpointGroups',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'list' => array(
+              'path' => '{project}/regions/{region}/networkEndpointGroups',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -8347,6 +9043,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -8427,6 +9127,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'wait' => array(
@@ -8552,6 +9256,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -8655,6 +9363,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'setUrlMap' => array(
@@ -8783,6 +9495,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'setSslCertificates' => array(
@@ -8936,6 +9652,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/regions/{region}/urlMaps/{urlMap}',
@@ -9055,6 +9775,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -9094,6 +9818,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -9159,6 +9887,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'insert' => array(
               'path' => '{project}/zones/{zone}/reservations',
@@ -9208,6 +9940,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'resize' => array(
@@ -9313,6 +10049,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'delete' => array(
               'path' => '{project}/regions/{region}/resourcePolicies/{resourcePolicy}',
@@ -9377,6 +10117,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'insert' => array(
               'path' => '{project}/regions/{region}/resourcePolicies',
@@ -9426,6 +10170,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'setIamPolicy' => array(
@@ -9507,6 +10255,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'delete' => array(
               'path' => '{project}/regions/{region}/routers/{router}',
@@ -9587,6 +10339,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'getRouterStatus' => array(
               'path' => '{project}/regions/{region}/routers/{router}/getRouterStatus',
@@ -9656,6 +10412,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -9809,6 +10569,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -9927,6 +10691,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listPreconfiguredExpressionSets' => array(
               'path' => '{project}/global/securityPolicies/listPreconfiguredExpressionSets',
@@ -9952,6 +10720,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -10069,6 +10841,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'list' => array(
               'path' => '{project}/global/snapshots',
@@ -10094,6 +10870,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'setIamPolicy' => array(
@@ -10180,6 +10960,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'delete' => array(
               'path' => '{project}/global/sslCertificates/{sslCertificate}',
@@ -10253,6 +11037,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -10338,6 +11126,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listAvailableFeatures' => array(
               'path' => '{project}/global/sslPolicies/listAvailableFeatures',
@@ -10363,6 +11155,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -10422,6 +11218,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -10511,6 +11311,10 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'insert' => array(
               'path' => '{project}/regions/{region}/subnetworks',
@@ -10561,6 +11365,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'listUsable' => array(
               'path' => '{project}/aggregated/subnetworks/listUsable',
@@ -10586,6 +11394,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -10763,6 +11575,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/global/targetGrpcProxies/{targetGrpcProxy}',
@@ -10821,6 +11637,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -10893,6 +11713,29 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                 ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => '{project}/global/targetHttpProxies/{targetHttpProxy}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'targetHttpProxy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -10955,6 +11798,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'delete' => array(
               'path' => '{project}/global/targetHttpsProxies/{targetHttpsProxy}',
@@ -11028,6 +11875,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'setQuicOverride' => array(
@@ -11145,6 +11996,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'delete' => array(
               'path' => '{project}/zones/{zone}/targetInstances/{targetInstance}',
@@ -11239,6 +12094,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -11326,6 +12185,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -11440,6 +12303,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'removeHealthCheck' => array(
@@ -11601,6 +12468,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'setBackendService' => array(
               'path' => '{project}/global/targetSslProxies/{targetSslProxy}/setBackendService',
@@ -11761,6 +12632,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'setBackendService' => array(
               'path' => '{project}/global/targetTcpProxies/{targetTcpProxy}/setBackendService',
@@ -11838,6 +12713,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -11933,6 +12812,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -11972,6 +12855,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -12066,6 +12953,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'patch' => array(
               'path' => '{project}/global/urlMaps/{urlMap}',
@@ -12158,6 +13049,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -12273,6 +13168,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'setLabels' => array(
               'path' => '{project}/regions/{region}/vpnGateways/{resource}/setLabels',
@@ -12356,6 +13255,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -12451,6 +13354,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
@@ -12532,6 +13439,10 @@ class Google_Service_Compute extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'wait' => array(
               'path' => '{project}/zones/{zone}/operations/{operation}/wait',
@@ -12602,6 +13513,10 @@ class Google_Service_Compute extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),

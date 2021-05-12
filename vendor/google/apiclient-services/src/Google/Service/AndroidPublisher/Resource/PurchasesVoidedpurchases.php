@@ -39,6 +39,10 @@ class Google_Service_AndroidPublisher_Resource_PurchasesVoidedpurchases extends 
    * token is set. Default value is current time minus 30 days. Note: This filter
    * is applied on the time at which the record is seen as voided by our systems
    * and not the actual voided time returned in the response.
+   * @opt_param string startIndex Defines the index of the first element to
+   * return. This can only be used if indexed paging is enabled.
+   * @opt_param string token Defines the token of the page to return, usually
+   * taken from TokenPagination. This can only be used if token paging is enabled.
    * @opt_param string maxResults Defines how many results the list operation
    * should return. The default number depends on the resource collection.
    * @opt_param string endTime The time, in milliseconds since the Epoch, of the
@@ -49,19 +53,13 @@ class Google_Service_AndroidPublisher_Resource_PurchasesVoidedpurchases extends 
    * not the actual voided time returned in the response.
    * @opt_param int type The type of voided purchases that you want to see in the
    * response. Possible values are: 0. Only voided in-app product purchases will
-   * be returned in the    response. This is the default value. 1. Both voided in-
-   * app purchases and voided subscription purchases    will be returned in the
-   * response.
-   *
+   * be returned in the response. This is the default value. 1. Both voided in-app
+   * purchases and voided subscription purchases will be returned in the response.
    * Note: Before requesting to receive voided subscription purchases, you must
    * switch to use orderId in the response which uniquely identifies one-time
    * purchases and subscriptions. Otherwise, you will receive multiple
    * subscription orders with the same PurchaseToken, because subscription renewal
    * orders share the same PurchaseToken.
-   * @opt_param string startIndex Defines the index of the first element to
-   * return. This can only be used if indexed paging is enabled.
-   * @opt_param string token Defines the token of the page to return, usually
-   * taken from TokenPagination. This can only be used if token paging is enabled.
    * @return Google_Service_AndroidPublisher_VoidedPurchasesListResponse
    */
   public function listPurchasesVoidedpurchases($packageName, $optParams = array())

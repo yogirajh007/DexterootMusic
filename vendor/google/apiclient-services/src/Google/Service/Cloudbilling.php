@@ -31,6 +31,12 @@
  */
 class Google_Service_Cloudbilling extends Google_Service
 {
+  /** View and manage your Google Cloud Platform billing accounts. */
+  const CLOUD_BILLING =
+      "https://www.googleapis.com/auth/cloud-billing";
+  /** View your Google Cloud Platform billing accounts. */
+  const CLOUD_BILLING_READONLY =
+      "https://www.googleapis.com/auth/cloud-billing.readonly";
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
@@ -94,6 +100,10 @@ class Google_Service_Cloudbilling extends Google_Service
               'path' => 'v1/billingAccounts',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -101,10 +111,6 @@ class Google_Service_Cloudbilling extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(
@@ -245,21 +251,21 @@ class Google_Service_Cloudbilling extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
+                'currencyCode' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'currencyCode' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'startTime' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),

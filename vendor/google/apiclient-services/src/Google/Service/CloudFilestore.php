@@ -82,6 +82,10 @@ class Google_Service_CloudFilestore extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'includeUnrevealedLocations' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -89,10 +93,6 @@ class Google_Service_CloudFilestore extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'includeUnrevealedLocations' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -148,7 +148,7 @@ class Google_Service_CloudFilestore extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -160,7 +160,7 @@ class Google_Service_CloudFilestore extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'orderBy' => array(
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -228,15 +228,15 @@ class Google_Service_CloudFilestore extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
